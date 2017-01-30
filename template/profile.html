@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <form method="POST" action="/add">
+        <label for="player">Player Name:</label>
+        <input type ="text" name ="player">
+        <input type="hidden" name="username" value={{.Name}}>
+        <br><br>
+        <input type ="submit" value="ADD">
+    </form>
+    
+    <h3>Your added Players</h3>
+    {{range $i,$e := .Players}}
+    <br>
+    {{$e}}
+    {{end}}
+    
+</body>
+</html>
